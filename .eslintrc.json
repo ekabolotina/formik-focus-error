@@ -1,0 +1,76 @@
+{
+    "extends": ["plugin:@typescript-eslint/recommended", "airbnb-typescript", "prettier"],
+    "ignorePatterns": ["*.config.js"],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "."
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "tsconfig.json"
+            }
+        }
+    },
+    "rules": {
+        "no-plusplus": "off",
+        "import/no-unresolved": "off",
+        "import/order": [
+            "warn",
+            {
+                "groups": ["builtin", "external", "internal", "sibling"],
+                "newlines-between": "never"
+            }
+        ],
+        "import/no-cycle": [
+            "warn",
+            {
+                "maxDepth": 2
+            }
+        ],
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "consistent-return": "off",
+        "react/state-in-constructor": ["error", "never"],
+        "react/jsx-props-no-spreading": [
+            "error",
+            {
+                "html": "enforce",
+                "custom": "ignore",
+                "explicitSpread": "enforce",
+                "exceptions": []
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "max-classes-per-file": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/static-property-placement": "off",
+        "newline-before-return": "error",
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": ["Link"],
+                "specialLink": ["hrefLeft", "hrefRight"],
+                "aspects": ["invalidHref", "preferButton"]
+            }
+        ],
+        "@typescript-eslint/no-redeclare": "off",
+        "arrow-body-style": "off",
+        "import/prefer-default-export": "off"
+    }
+}
