@@ -1,6 +1,6 @@
 {
     "name": "formik-focus-error",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "A React component to focus field with error inside Formik",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
         "test": "jest",
         "build": "rm -rf ./dist && tsc -p tsconfig.build.json && NODE_ENV=production babel src --out-dir dist --extensions \".ts,.tsx\"",
         "prepare": "is-ci || husky install",
-        "prepublish": "yarn run build"
+        "prepublishOnly": "yarn run build"
     },
     "dependencies": {
         "lodash": ">=3.7.0"
