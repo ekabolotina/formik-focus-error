@@ -1,6 +1,6 @@
 {
     "name": "formik-focus-error",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A React component to focus field with error inside Formik",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -12,7 +12,6 @@
     "scripts": {
         "format": "prettier",
         "format-all": "yarn run format \"src/**/*.{js,jsx,ts,tsx,json}\"",
-        "format-al": "yarn run format \"**/*.{js,jsx,ts,tsx,json}\" --write",
         "lint-js": "eslint",
         "lint-js-all": "yarn run lint-js \"src/**/*.{js,jsx,ts,tsx}\"",
         "lint": "yarn run lint-js-all && yarn format-all --check",
